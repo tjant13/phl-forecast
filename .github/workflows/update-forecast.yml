@@ -27,8 +27,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install numpy requests matplotlib scipy
 
-      - name: Generate forecast charts
-        run: python Multimodel_ShortTerm_Forecast_Tool2.py
+      - name: Generate original forecast charts
+        run: python -u Multimodel_ShortTerm_Forecast_Tool2.py
+
+      - name: Generate new meteograms
+        run: python -u "PyForecast_v2 (1).py"
 
       - name: Publish updated charts
         run: |
