@@ -1,61 +1,59 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHL Forecast | Philadelphia Weather</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #eef4f8;
-            color: #1c2d3a;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Philadelphia Area Forecasts</title>
+  <style>
+    body {
+      margin: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: white;
+    }
 
-        header {
-            background: #173b5e;
-            color: white;
-            padding: 24px;
-            border-radius: 12px;
-        }
+    h1 {
+      margin-bottom: 4px;
+    }
 
-        section {
-            background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 12px;
-        }
+    .subtitle {
+      margin-top: 0;
+      margin-bottom: 24px;
+      color: #555;
+    }
 
-        footer {
-            margin-top: 24px;
-            color: #526574;
-            font-size: 0.9em;
-        }
-    </style>
+    .forecast-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .forecast-grid img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 700px) {
+      .forecast-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>PHL Forecast</h1>
-        <p>Independent weather forecasting for the Philadelphia area</p>
-    </header>
+  <h1>Philadelphia Area Forecasts</h1>
+  <p class="subtitle">Multi-model forecast guidance for the Philadelphia area.</p>
 
-    <section>
-        <h2>Forecast Dashboard</h2>
-        <p>Automated forecast products coming soon</p>
-        <p>Location: Philadelphia and surrounding area</p>
-    </section>
-
-    <section>
-        <h2>Forecast Products</h2>
-        <p>Plots will go here soon</p>
-    </section>
-
-    <footer>
-        <p>Last updated: Website setup in progress</p>
-    </footer>
+  <div class="forecast-grid">
+    <img src="plots/precip_forecast_chart_spline.png"
+         alt="Precipitation forecast chart">
+    <img src="plots/wind_gust_forecast_chart_spline.png"
+         alt="Wind gust forecast chart">
+    <img src="plots/cape_forecast_chart_spline.png"
+         alt="CAPE forecast chart">
+    <img src="plots/temperature_forecast_chart_spline.png"
+         alt="Temperature forecast chart">
+  </div>
 </body>
 </html>
-```
