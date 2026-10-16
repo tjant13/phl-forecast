@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,158 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Philadelphia Area Forecasts</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 24px;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #ffffff, #5ecfff);
-      color: #000000;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    h1 {
-      margin-bottom: 8px;
-      color: #174a7e;
-    }
-
-    header p {
-      color: #536579;
-      margin: 0;
-    }
-
-    h2 {
-      color: #174a7e;
-      margin: 32px 0 16px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #d3e1ef;
-    }
-
-    .chart-grid {
-      display: grid;
-      gap: 20px;
-    }
-
-    .forecast-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .meteogram-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .chart {
-      background: white;
-      border-radius: 12px;
-      padding: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      min-width: 0;
-    }
-
-    .chart img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
-
-    footer {
-      text-align: center;
-      color: #657589;
-      font-size: 0.9rem;
-      margin-top: 32px;
-    }
-
-    @media (min-width: 1100px) {
-      .forecast-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 650px) {
-      body {
-        padding: 12px;
-      }
-
-      .meteogram-grid {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 1.7rem;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <header>
-    <h1>Philadelphia Area Forecasts</h1>
-    <p>Multi-model weather guidance for the Philadelphia region</p>
-  </header>
 
-  <main>
-    <h2>Regional Forecast Charts</h2>
+  <h1>Philadelphia Area Forecasts</h1>
 
-    <section class="chart-grid forecast-grid">
-      <div class="chart">
-        <img src="plots/precip_forecast_chart_spline.png"
-             alt="Precipitation forecast">
-      </div>
+  <p style="color: #444444;">
+    Multi model weather guidance for the Philadelphia region
+  </p>
 
-      <div class="chart">
-        <img src="plots/wind_gust_forecast_chart_spline.png"
-             alt="Wind gust forecast">
-      </div>
+  <h2>Regional Forecast Charts</h2>
 
-      <div class="chart">
-        <img src="plots/cape_forecast_chart_spline.png"
-             alt="Atmospheric instability forecast">
-      </div>
+  <img src="plots/precip_forecast_chart_spline.png"
+       alt="Precipitation forecast" width="48%">
 
-      <div class="chart">
-        <img src="plots/temperature_forecast_chart_spline.png"
-             alt="Temperature forecast">
-      </div>
-    </section>
+  <img src="plots/wind_gust_forecast_chart_spline.png"
+       alt="Wind gust forecast" width="48%">
 
-    <h2>Individual Model Meteograms</h2>
+  <img src="plots/cape_forecast_chart_spline.png"
+       alt="Atmospheric instability forecast" width="48%">
 
-    <section class="chart-grid meteogram-grid">
-      <div class="chart">
-        <img src="plots/meteogram_precipitation.png"
-             alt="Precipitation comparison between weather models">
-      </div>
+  <img src="plots/temperature_forecast_chart_spline.png"
+       alt="Temperature forecast" width="48%">
 
-      <div class="chart">
-        <img src="plots/meteogram_temperature.png"
-             alt="Temperature comparison between weather models">
-      </div>
+  <h2>Meteograms</h2>
 
-      <div class="chart">
-        <img src="plots/meteogram_wind.png"
-             alt="Wind speed comparison between weather models">
-      </div>
+  <img src="plots/meteogram_precipitation.png"
+       alt="Precipitation comparison between weather models" width="48%">
 
-      <div class="chart">
-        <img src="plots/meteogram_pressure.png"
-             alt="Sea-level pressure comparison between weather models">
-      </div>
-    </section>
-  </main>
+  <img src="plots/meteogram_temperature.png"
+       alt="Temperature comparison between weather models" width="48%">
 
-  <footer>
-    Forecast charts update automatically every three hours.
-    Model guidance may differ and is subject to change.
-  </footer>
+  <img src="plots/meteogram_wind.png"
+       alt="Wind speed comparison between weather models" width="48%">
+
+  <img src="plots/meteogram_pressure.png"
+       alt="Sea-level pressure comparison between weather models" width="48%">
+
+  <p style="color: #666666; font-size: 14px;">
+    Forecast charts should update automatically every three hours.
+  </p>
+
 </body>
 </html>
+```
